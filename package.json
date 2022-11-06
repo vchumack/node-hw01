@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/vchumack/node-hw01#readme",
   "dependencies": {
+    "bson-objectid": "^2.0.3",
+    "commander": "^9.4.1",
     "nodemon": "^2.0.20"
   }
 }
