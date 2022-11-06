@@ -13,7 +13,6 @@ program.parse(process.argv);
 
 const argv = program.opts();
 
-// TODO: рефакторить
 async function invokeAction({ action, id, name, email, phone }) {
   switch (action) {
     case "list":
@@ -42,23 +41,3 @@ async function invokeAction({ action, id, name, email, phone }) {
 }
 
 invokeAction(argv);
-// invokeAction({
-//   action: "remove",
-//   id: "636750abe2e4cb4ac4c0cb1d",
-// });
-// invokeAction({ action: "list" });
-
-// обработка запроса
-// const PORT = 2222;
-// const requestHandler = (request, response) => {
-//   response.writeHead(200, { "Content-type": "text/html" });
-//   response.end("<h1>Hello bitches</h1>");
-// };
-
-// const server = http.createServer(requestHandler);
-// server.listen(PORT, (err) => {
-//   if (err) {
-//     console.error("Error", err);
-//   }
-//   console.log(`server works at port - ${PORT}`);
-// });

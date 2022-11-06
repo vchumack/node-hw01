@@ -2,28 +2,12 @@ const fs = require("fs").promises;
 const ObjectID = require("bson-objectid");
 const path = require("path");
 
-// console.log(path.join(__dirname, "contacts.json"));
-// console.log(path.resolve("contacts.json"));
-
-// чтение файла
-// fs.readFile("./contacts.json", "utf-8").then(console.log).catch(console.log);
-// const fileOperation = async () => {
-//   try {
-//     const data = await fs.readFile("db/contacts.json", "utf-8");
-//     console.log(data);
-//   } catch (error) {
-//     console.log(error);
-//   }
-// };
-// fileOperation();
-
 const contactsPath = path.join(__dirname, "db/contacts.json");
 
 const updateContacts = async (contact) => {
   await fs.writeFile(contactsPath, JSON.stringify(contact, null, 2));
 };
 
-// TODO: задокументировать каждую функцию
 const listContacts = async () => {
   try {
     const data = await fs.readFile(contactsPath);
